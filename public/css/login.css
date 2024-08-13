@@ -1,0 +1,110 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0e7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    background-color: #1d4ed8;
+    transform: translateY(0);
+}
+
+#errorMessage {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ef4444;
+}
+
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}

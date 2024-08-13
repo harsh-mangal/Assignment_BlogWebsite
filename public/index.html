@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>VitaWell</title>
+</head>
+<body>
+ 
+    <header>
+        <div id="logoNavbar">
+            <div class="logo">
+                <img src="https://th.bing.com/th/id/R.759ecde507280a3c8fc2369d40dd76af?rik=ydvKvYuXZnvj8A&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f7%2fHealthy-Care-PNG-Transparent-Image.png&ehk=8Smv0mxln0oHpWRL%2fbOeFD3lCYi25gjDH0%2fPHZL%2bGTI%3d&risl=&pid=ImgRaw&r=0" alt="CMS Logo" />
+            </div>
+            <div class="brand-name">
+                <h1>VitaWell</h1>
+            </div>
+        </div>
+          
+            <nav id="navMenu"></nav>
+      
+      
+    </header>
+    <main id="content">
+        <h2>Welcome to My CMS</h2>
+        <p>This is the homepage.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 VitaWell. All rights reserved.</p>
+    </footer>
+
+    <script>
+     async function fetchPageData(pageId) {
+    try {
+        const response = await fetch(`http://localhost:3000/api/getpages/${pageId}`); 
+        const pageData = await response.json();
+
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = '';
+
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        if (pageData.image) {
+            const img = document.createElement('img');
+            img.src = pageData.image;
+            card.appendChild(img);
+        }
+
+        const title = document.createElement('h2');
+        title.textContent = pageData.title;
+        card.appendChild(title);
+
+        const date = document.createElement('p');
+        date.className = 'date';
+        date.textContent = `Created at: ${new Date(pageData.createdAt).toLocaleString()}`;
+        card.appendChild(date);
+
+        const content = document.createElement('p');
+        content.textContent = pageData.content;
+        card.appendChild(content);
+
+        contentDiv.appendChild(card);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+
+function getPageIdFromParams() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id'); 
+}
+
+
+window.onload = () => {
+    const pageId = getPageIdFromParams();
+    if (pageId) {
+        fetchPageData(pageId); 
+    } else {
+        fetchPageData('defaultPageId');
+    }
+};
+
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

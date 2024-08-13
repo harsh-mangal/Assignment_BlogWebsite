@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/edit.css">
+    <title>Create New Page</title>
+</head>
+<body>
+    <header>
+        <h1>Create New Page</h1>
+        <nav>
+            <a href="admin.html">Back to Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <form id="createPageForm">
+            <input type="text" id="title" placeholder="Page Title" required>
+            <input type="text" id="slug" placeholder="Page Slug" required>
+            <textarea id="content" placeholder="Page Content" required></textarea>
+            <input type="text" id="image" placeholder="Image URL (optional)">
+            <button type="submit">Create Page</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 VitaWell. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
