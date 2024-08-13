@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('navMenu');
     const createPageForm = document.getElementById('createPageForm');
     const editPageForm = document.getElementById('editPageForm');
-    
+
+
     const fetchPages = async () => {
         const res = await fetch('/api/pages');
         const pages = await res.json();
@@ -12,18 +13,44 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const renderPages = async () => {
         const pages = await fetchPages();
-        
-      if (pageList) {
+        if (pageList) {
             pageList.innerHTML = '';
             pages.forEach(page => {
                 const li = document.createElement('li');
                 li.innerHTML = `
                     ${page.title} - 
                     <a href="edit.html?id=${page._id}">Edit</a>
+                    <a href="#" class="delete-link" data-id="${page._id}">Delete</a>
                 `;
                 pageList.appendChild(li);
             });
+        
+         
+            const deleteLinks = document.querySelectorAll('.delete-link');
+            deleteLinks.forEach(link => {
+                link.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    const id = e.target.getAttribute('data-id');
+                    
+                    if (confirm('Are you sure you want to delete this page?')) {
+                        const res = await fetch(`/api/pages/${id}`, {
+                            method: 'DELETE',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                        });
+        
+                        if (res.ok) {
+                          
+                            e.target.parentElement.remove();
+                        } else {
+                            alert('Failed to delete page');
+                        }
+                    }
+                });
+            });
         }
+        
         
      
         
@@ -98,15 +125,20 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Failed to update page');
         }
     };
-
-    const deletePage = async (id) => {
+    const deletePage = async () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+    
         if (confirm('Are you sure you want to delete this page?')) {
             const res = await fetch(`/api/pages/${id}`, {
                 method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
             });
-
+    
             if (res.ok) {
-                renderPages();
+                window.location.href = 'admin.html';
             } else {
                 alert('Failed to delete page');
             }
@@ -121,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         editPageForm.addEventListener('submit', editPage);
         loadPageForEdit();
     }
-
+    
     renderPages();
 });
 
