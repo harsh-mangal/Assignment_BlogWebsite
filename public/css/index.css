@@ -19,7 +19,6 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
@@ -87,7 +86,6 @@ main {
     background: #ffffff;
     margin: 20px auto;
     max-width: 1000px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
@@ -97,12 +95,9 @@ main {
     padding: 20px;
     background: #ffffff;
     margin-bottom: 20px;
-    transition: box-shadow 0.3s ease-in-out;
+ 
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
 
 .card img {
     max-width: 50%;
@@ -136,6 +131,6 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+
     font-size: 14px;
 }

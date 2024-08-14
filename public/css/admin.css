@@ -15,7 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
 }
 
 header h1 {
@@ -42,13 +42,13 @@ main {
     max-width: 800px;
     margin: 2rem auto;
     background-color: #ffffff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  
     border-radius: 10px;
-    transition: box-shadow 0.3s ease-in-out;
+  
 }
 
 main:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  
 }
 
 main h2 {
@@ -121,6 +121,6 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+
     font-size: 0.9rem;
 }
