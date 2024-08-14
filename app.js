@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 const apiRoutes = require('./routes/api');
 
-mongoose.connect('mongodb://localhost:27017/cmsDatabase', {
+mongoose.connect('mongodb+srv://mayank:mayank@cluster0.f4cdz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

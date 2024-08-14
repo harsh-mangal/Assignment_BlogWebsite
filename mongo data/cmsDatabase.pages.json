@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "66bba8e4f225bb8231061fde"
+  },
+  "title": "The Benefits of Regular Exercise",
+  "slug": "benefits-of-exercise",
+  "content": "Regular exercise is crucial for maintaining a healthy lifestyle. It helps in weight management, improves cardiovascular health, and boosts mental well-being. Exercise also releases endorphins, which are natural mood lifters.",
+  "image": "https://th.bing.com/th/id/OIP.tlCxpDwVTWbJBsUSeVc6QwHaEU?rs=1&pid=ImgDetMain"
+},
+{
+  "_id": {
+    "$oid": "66bba8e4f225bb8231061fdf"
+  },
+  "title": "Eating a Balanced Diet",
+  "slug": "balanced-diet",
+  "content": "A balanced diet is essential for providing the body with necessary nutrients. It includes a variety of foods from all food groups to ensure overall health. Proper nutrition can also help prevent chronic diseases and support a strong immune system.",
+  "image": "https://th.bing.com/th/id/R.4caebb685bf668e90e92692115e4ad3d?rik=59k%2fFm4%2bHrBprg&pid=ImgRaw&r=0"
+},
+{
+  "_id": {
+    "$oid": "66bba8e4f225bb8231061fe0"
+  },
+  "title": "Understanding Mental Health",
+  "slug": "mental-health-guide",
+  "content": "Mental health is as important as physical health. It's vital to recognize and address mental health issues early to maintain overall well-being. Mental health includes emotional, psychological, and social well-being, and affects how we think, feel, and act.",
+  "image": "https://th.bing.com/th/id/R.1732c9444df9d0dd12753f24fad2ff7e?rik=JR3B3x23EijxBg&pid=ImgRaw&r=0"
+},
+{
+  "_id": {
+    "$oid": "66bba8e4f225bb8231061fe1"
+  },
+  "title": "The Importance of Hydration",
+  "slug": "importance-of-hydration",
+  "content": "Staying hydrated is key to maintaining good health. Water supports bodily functions, aids digestion, and keeps the skin healthy. Dehydration can lead to fatigue, headaches, and reduced physical performance, making it crucial to drink enough water daily.",
+  "image": "https://lovinglifeco.com/wp-content/uploads/2023/04/lady-staying-hydrated-drinking-water-from-a-bottle.jpg"
+}]
