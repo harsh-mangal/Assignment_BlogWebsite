@@ -1,7 +1,6 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e0e7ff;
     margin: 0;
     padding: 0;
     color: #1e293b;
@@ -10,10 +9,11 @@ body {
 }
 
 header {
-    background-color: #1f2937;
+    background-color: #1e293b;
     color: #ffffff;
-    padding: 1rem 2rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
  
 }
 
@@ -26,14 +26,10 @@ header h1 {
 nav a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
     margin-left: 1.5rem;
     transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #fbbf24;
-}
 
 
 main {
@@ -83,10 +79,6 @@ button[type="submit"] {
     text-align: center;
 }
 
-button[type="submit"]:hover {
-    background-color: #111827;
-    transform: translateY(-2px);
-}
 
 button[type="submit"]:active {
     background-color: #0f172a;
@@ -96,8 +88,7 @@ button[type="submit"]:active {
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #1f2937;
+    background-color: #1e293b;
     color: white;
     position: fixed;
     width: 100%;

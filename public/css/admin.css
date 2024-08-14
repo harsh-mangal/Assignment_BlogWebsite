@@ -1,7 +1,6 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e0e7ff;
     margin: 0;
     padding: 0;
     color: #1e293b;
@@ -9,9 +8,8 @@ body {
 }
 
 header {
-    background-color: #1f2937;
+    background-color: #1e293b;
     color: #ffffff;
-    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,13 +25,8 @@ header h1 {
 nav a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
     margin-left: 1.5rem;
     transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #fbbf24;
 }
 
 
@@ -47,9 +40,6 @@ main {
   
 }
 
-main:hover {
-  
-}
 
 main h2 {
     font-size: 1.75rem;
@@ -65,7 +55,7 @@ main h2 {
 }
 
 #pageList li {
-    background-color: #f9fafb;
+
     border: 1px solid #d1d5db;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -73,13 +63,8 @@ main h2 {
     display: flex;
     justify-content: start;
     align-items: center;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-#pageList li:hover {
-    background-color: #f3f4f6;
-    border-color: #cbd5e1;
-}
 
 #pageList li a {
     margin-left: 10px;
@@ -89,9 +74,8 @@ main h2 {
     transition: color 0.3s ease;
 }
 
-#pageList li a:hover {
-    color: #2563eb;
-}
+
+
 #logoutButton {
     color: #ffffff;
     background-color: red;
@@ -102,10 +86,8 @@ main h2 {
     padding: 5px;
 }
 
-#logoutButton:hover {
-    background-color: #111827;
-    transform: translateY(-2px);
-}
+
+
 
 #logoutButton:active {
     background-color: #0f172a;
@@ -115,12 +97,10 @@ main h2 {
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #1f2937;
+    background-color: #1e293b;
     color: white;
     position: fixed;
     width: 100%;
     bottom: 0;
-
     font-size: 0.9rem;
 }
