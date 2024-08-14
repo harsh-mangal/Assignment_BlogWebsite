@@ -32,6 +32,8 @@
 
     <script>
      async function fetchPageData(pageId) {
+        if(pageId!=="defaultPageId")
+        {
     try {
         const response = await fetch(`http://localhost:3000/api/getpages/${pageId}`); 
         const pageData = await response.json();
@@ -65,6 +67,7 @@
     } catch (error) {
         console.error('Error fetching data:', error);
     }
+}
 }
 
 
